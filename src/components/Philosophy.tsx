@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Check } from 'lucide-react';
+import guruImage from '../images/image1.jpeg';
 
 const Philosophy = () => {
   return (
@@ -18,6 +19,7 @@ const Philosophy = () => {
           >
             <div className="w-full max-w-[400px] aspect-square rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex flex-col items-center justify-center gap-3 relative overflow-hidden shadow-lg">
               <div className="absolute inset-4 border border-dashed border-brand-gold/40 rounded-full z-20 pointer-events-none" />
+              <img src={guruImage} alt="Artistic Director" className="absolute inset-0 w-full h-full object-cover object-top" />
             </div>
             {/* Decorative Elements */}
             <div className="absolute w-full max-w-[440px] aspect-square rounded-full border border-brand-gold/20 -z-10" />

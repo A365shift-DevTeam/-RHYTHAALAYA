@@ -1,14 +1,19 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import img1 from '../images/gallery/1.jpeg';
+import img2 from '../images/gallery/2.jpeg';
+import img3 from '../images/gallery/3.jpeg';
+import img4 from '../images/gallery/4.jpeg';
+import img5 from '../images/gallery/5.jpeg';
 
 const Gallery = () => {
   const items = [
-    { label: 'Nritta', span: 'col-span-1 md:col-span-2', aspect: 'aspect-[1/1.2] md:aspect-[2/1.2]', image: 'https://upload.wikimedia.org/wikipedia/commons/1/10/Bharatanatyam_dance_at_shilpakala_academy_07.jpg' },
-    { label: 'Abhinaya', span: 'col-span-1', aspect: 'aspect-[1/1.2]', image: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Bharatanatyam_-_Durga_Swaminathan_02.jpg' },
-    { label: 'Studio', span: 'col-span-1', aspect: 'aspect-[1/1.2]', image: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Bharatanatyam_dance_at_shilpakala_academy_05.jpg' },
-    { label: 'Arangetram', span: 'col-span-1', aspect: 'aspect-[1/1.2]', image: 'https://upload.wikimedia.org/wikipedia/commons/3/3c/Bharatanatyam_dance_at_shilpakala_academy_02.jpg' },
-    { label: 'Ensemble', span: 'col-span-1 md:col-span-2', aspect: 'aspect-[1/1.2] md:aspect-[2/1.2]', image: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Bharatanatyam_dance_at_shilpakala_academy_08.jpg' },
-    { label: 'Stage', span: 'col-span-1', aspect: 'aspect-[1/1.2]', image: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Bharatanatyam_dance_at_shilpakala_academy_09.jpg' },
+    { label: 'Nritta', span: 'col-span-1 md:col-span-2', aspect: 'aspect-[1/1.2] md:aspect-[2/1.2]', image: img3 },
+    { label: 'Abhinaya', span: 'col-span-1', aspect: 'aspect-[1/1.2]', image: img2 },
+    { label: 'Studio', span: 'col-span-1', aspect: 'aspect-[1/1.2]', image: img5 },
+    { label: 'Arangetram', span: 'col-span-1', aspect: 'aspect-[1/1.2]', image: img1 },
+    { label: 'Ensemble', span: 'col-span-1 md:col-span-2', aspect: 'aspect-[1/1.2] md:aspect-[2/1.2]', image: img4 },
+    { label: 'Stage', span: 'col-span-1', aspect: 'aspect-[1/1.2]', image: img2 },
   ];
 
   return (
@@ -39,9 +44,9 @@ const Gallery = () => {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className={`${item.span} ${item.aspect} bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl flex flex-col items-center justify-center gap-2 hover:scale-[1.02] hover:border-brand-gold/30 transition-all duration-400 cursor-pointer relative overflow-hidden group`}
             >
+              <img src={item.image} alt={item.label} className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 z-10" />
               <div className="absolute inset-2.5 border border-dashed border-brand-gold/30 rounded-lg z-20 pointer-events-none" />
-              <span className="absolute bottom-6 text-[11px] tracking-[3px] uppercase text-brand-gold z-30 font-medium drop-shadow-md">{item.label}</span>
             </motion.div>
           ))}
         </div>

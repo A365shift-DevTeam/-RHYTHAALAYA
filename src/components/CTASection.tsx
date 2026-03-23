@@ -16,14 +16,19 @@ const CTASection = () => {
         className="max-w-2xl mx-auto px-6 relative z-10"
       >
         <h2 className="font-serif text-4xl md:text-[52px] text-white mb-5 tracking-[3px] font-light">
-          Join Our Legacy
+          Get In Touch
         </h2>
         <p className="text-white/60 mb-10 text-[15px] font-light leading-relaxed">
-          Admissions are now open for the upcoming academic year. Discover your potential through the timeless art of Bharatanatyam.
+          Have any questions about our admissions or classes? Reach out to us directly on WhatsApp to discover your potential through the timeless art of Bharatanatyam.
         </p>
-        <button className="inline-flex items-center gap-2.5 px-11 py-4 bg-brand-gold text-[#0b1f1c] rounded-full font-medium tracking-[2px] uppercase text-[13px] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(212,175,55,0.3)] transition-all">
-          Apply Now <ArrowRight size={16} />
-        </button>
+        <a 
+          href="https://wa.me/919597302769" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex flex-row items-center gap-2.5 px-11 py-4 bg-[#25D366] text-white rounded-full font-medium tracking-[2px] uppercase text-[13px] hover:bg-[#1fad53] hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(37,211,102,0.3)] transition-all"
+        >
+          Contact Us <ArrowRight size={16} />
+        </a>
       </motion.div>
     </section>
   );
