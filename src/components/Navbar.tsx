@@ -39,12 +39,16 @@ const Navbar = () => {
               {item}
             </a>
           ))}
-          <button className={`px-8 py-2.5 rounded-full border text-sm tracking-widest uppercase font-medium transition-all duration-300 ${isScrolled
+          <a 
+            href="https://wa.me/919597302769"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`px-8 py-2.5 rounded-full border text-sm tracking-widest uppercase font-medium transition-all duration-300 ${isScrolled
               ? 'border-white/30 text-white hover:bg-white hover:text-[#0b1f1c]'
               : 'border-white/50 text-white hover:bg-white hover:text-[#0b1f1c]'
             }`}>
-            Enquire Now
-          </button>
+            Contact Us
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -79,9 +83,14 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            <button className="mt-4 px-6 py-3 rounded-full border border-white/30 text-white text-sm tracking-widest uppercase w-full font-medium hover:bg-white hover:text-[#0b1f1c] transition-colors">
-              Enquire Now
-            </button>
+            <a 
+              href="https://wa.me/919597302769"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 px-6 py-3 rounded-full border border-white/30 text-white text-sm tracking-widest uppercase w-full font-medium hover:bg-white hover:text-[#0b1f1c] transition-colors text-center"
+            >
+              Contact Us
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
