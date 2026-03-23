@@ -19,9 +19,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-[#0b1f1c]/80 backdrop-blur-md shadow-sm py-4 border-b border-white/5' : 'bg-transparent py-6'
-      }`}
+      className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-[#0b1f1c]/80 backdrop-blur-md shadow-sm py-4 border-b border-white/5' : 'bg-transparent py-6'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="flex items-center gap-2">
@@ -41,17 +40,16 @@ const Navbar = () => {
               {item}
             </a>
           ))}
-          <button className={`px-8 py-2.5 rounded-full border text-sm tracking-widest uppercase font-medium transition-all duration-300 ${
-            isScrolled 
-              ? 'border-white/30 text-white hover:bg-white hover:text-[#0b1f1c]' 
+          <button className={`px-8 py-2.5 rounded-full border text-sm tracking-widest uppercase font-medium transition-all duration-300 ${isScrolled
+              ? 'border-white/30 text-white hover:bg-white hover:text-[#0b1f1c]'
               : 'border-white/50 text-white hover:bg-white hover:text-[#0b1f1c]'
-          }`}>
+            }`}>
             Enquire Now
           </button>
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button 
+        <button
           className="md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -92,9 +90,18 @@ const Navbar = () => {
   );
 };
 
+const mudras = [
+  "Pataka", "Tripataka", "Ardhapataka", "Kartarimukha", "Mayura", 
+  "Ardhachandra", "Arala", "Shukatundaka", "Mushti", "Shikharam", 
+  "Kapittha", "Katakamukham", "Suchi", "Chandrakala", "Padmakosha", 
+  "Sarpashirsha", "Mrigashirsha", "Simhamukha", "Kangula", "Alapadma", 
+  "Chatura", "Bhramara", "Hamsasya", "Hamsapakshaka", "Samdamsha", 
+  "Mukula", "Tamrachuda", "Trishula"
+];
+
 const Hero = () => {
   return (
-    <section 
+    <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
       style={{
         backgroundColor: '#0b2c2f',
@@ -118,25 +125,54 @@ const Hero = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
             Bharatanatyam Dance Studio
           </div>
-          
-          {/* Main Title */}
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-[110px] text-white leading-none tracking-[0.05em] mb-6">
-            RHYTHAALAYA
-          </h1>
-          
-          {/* Subtitle */}
-          <div className="text-brand-gold text-sm md:text-base tracking-[0.3em] uppercase mb-16 h-6 flex items-center justify-center">
-            <TypeAnimation
-              sequence={[
-                'Dance Beyond Movement',
-                2000,
-                '',
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+
+          <div className="inline-flex flex-col items-stretch w-max max-w-full">
+            {/* Main Title */}
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-[110px] text-white leading-none tracking-[0.05em] mb-6 text-center">
+              RHYTHAALAYA
+            </h1>
+
+            {/* Subtitle */}
+            <div className="text-brand-gold text-sm md:text-base tracking-[0.3em] uppercase mb-10 h-6 flex items-center justify-center">
+              <TypeAnimation
+                sequence={[
+                  'Dance Beyond Movement',
+                  2000,
+                  '',
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </div>
+
+            {/* Constrained Mudras Marquee */}
+            <div className="w-full relative overflow-hidden flex whitespace-nowrap border-y border-brand-gold/20 py-2.5 mb-10 bg-transparent">
+              <div className="absolute inset-y-0 left-0 w-8 md:w-16 bg-gradient-to-r from-[#0b2c2f] to-transparent z-10 pointer-events-none" />
+              <div className="absolute inset-y-0 right-0 w-8 md:w-16 bg-gradient-to-l from-[#0b2c2f] to-transparent z-10 pointer-events-none" />
+              
+              <motion.div 
+                 className="inline-flex items-center min-w-max"
+                 animate={{ x: [0, "-50%"] }}
+                 transition={{ duration: 40, ease: "linear", repeat: Infinity }}
+              >
+                {[...Array(2)].map((_, i) => (
+                  <React.Fragment key={i}>
+                    {mudras.map((mudra, idx) => (
+                      <React.Fragment key={`${i}-${idx}`}>
+                        <span className="mx-5 md:mx-6 text-[10px] tracking-[4px] uppercase text-brand-gold/70 font-medium whitespace-nowrap">
+                          {mudra}
+                        </span>
+                        <span className="text-brand-gold/40 text-[10px] flex-shrink-0">
+                          •
+                        </span>
+                      </React.Fragment>
+                    ))}
+                  </React.Fragment>
+                ))}
+              </motion.div>
+            </div>
           </div>
 
           {/* Lower Section */}
@@ -176,7 +212,9 @@ const Hero = () => {
 
 const Philosophy = () => {
   return (
-    <section id="philosophy" className="py-24 md:py-32 relative">
+    <section id="philosophy" className="py-24 md:py-32 relative bg-black/20 border-t border-b border-white/5">
+      {/* Ambient glow */}
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -215,7 +253,7 @@ const Philosophy = () => {
                 We balance the strict adherence to the traditional Margam (repertoire) with modern pedagogical techniques, ensuring our students develop not just technical perfection in Nritta (pure dance), but deep emotional resonance in Abhinaya (expression).
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
               {[
                 "Global Certification",
@@ -259,6 +297,8 @@ const Curriculum = () => {
 
   return (
     <section id="curriculum" className="py-24 md:py-32 relative">
+      {/* Ambient glow */}
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#1c4b45]/10 rounded-full blur-[150px] -z-10 pointer-events-none" />
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <span className="text-brand-gold tracking-[4px] uppercase text-[11px] font-bold mb-3 block">
@@ -303,6 +343,53 @@ const Curriculum = () => {
   );
 };
 
+const VideoSection = () => {
+  return (
+    <section className="py-24 md:py-32 relative bg-[#040c0a] border-t border-b border-white/5 shadow-[inset_0_0_100px_rgba(0,0,0,0.8)]">
+      <div className="max-w-6xl mx-auto px-6 md:px-12">
+        <div className="text-center mb-16">
+          <span className="text-brand-gold tracking-[4px] uppercase text-[11px] font-bold mb-3 block">
+            Performance Reel
+          </span>
+          <h2 className="font-serif text-4xl md:text-[50px] text-white leading-[1.2] mb-4 mt-2">
+            Experience the Art
+          </h2>
+          <div className="w-10 h-[2px] bg-brand-gold mx-auto mt-6" />
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.5)] group cursor-pointer border border-white/5"
+        >
+          {/* Subtle gradient overlay for better text contrast and mood */}
+          <div className="absolute inset-0 bg-[#0b1f1c]/30 group-hover:bg-[#0b1f1c]/10 transition-all duration-500 z-10" />
+
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Bharatanatyam_-_Durga_Swaminathan_02.jpg"
+            alt="Performance Video"
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            referrerPolicy="no-referrer"
+          />
+
+          {/* Center Play Button and Text */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
+            <div className="w-[72px] h-[72px] bg-brand-gold rounded-full flex items-center justify-center mb-5 transform group-hover:scale-110 group-hover:bg-[#e0bb40] transition-all duration-300 shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+              {/* Play icon offset slightly to look perfectly centered optically */}
+              <Play className="w-8 h-8 text-[#0b1f1c] ml-1.5" fill="currentColor" />
+            </div>
+            <span className="text-brand-gold tracking-[3px] uppercase text-[12px] font-bold drop-shadow-md">
+              Watch Performance
+            </span>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 const Gallery = () => {
   const items = [
     { label: 'Nritta', span: 'col-span-1 md:col-span-2', aspect: 'aspect-[1/1.2] md:aspect-[2/1.2]', image: 'https://upload.wikimedia.org/wikipedia/commons/1/10/Bharatanatyam_dance_at_shilpakala_academy_07.jpg' },
@@ -314,7 +401,9 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-24 md:py-32 relative">
+    <section id="gallery" className="py-24 md:py-32 relative bg-black/20">
+      {/* Ambient glow */}
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#1c4b45]/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <span className="text-brand-gold tracking-[4px] uppercase text-[11px] font-bold mb-3 block">
@@ -331,7 +420,7 @@ const Gallery = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {items.map((item, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -353,25 +442,25 @@ const Gallery = () => {
 
 const EnterpriseFeatures = () => {
   const features = [
-    { 
-      title: 'Global Certification', 
-      desc: 'Internationally recognized grading system and diplomas, ensuring our students meet global standards of classical arts education.', 
-      icon: Award 
+    {
+      title: 'Global Certification',
+      desc: 'Internationally recognized grading system and diplomas, ensuring our students meet global standards of classical arts education.',
+      icon: Award
     },
-    { 
-      title: 'Hybrid Conservatory', 
-      desc: 'State-of-the-art virtual studios complementing physical classes, allowing students worldwide to access our elite curriculum.', 
-      icon: Globe 
+    {
+      title: 'Hybrid Conservatory',
+      desc: 'State-of-the-art virtual studios complementing physical classes, allowing students worldwide to access our elite curriculum.',
+      icon: Globe
     },
-    { 
-      title: 'Live Accompaniment', 
-      desc: 'Training with professional Carnatic musicians to develop a profound understanding of rhythm, melody, and musicality.', 
-      icon: Music 
+    {
+      title: 'Live Accompaniment',
+      desc: 'Training with professional Carnatic musicians to develop a profound understanding of rhythm, melody, and musicality.',
+      icon: Music
     },
   ];
 
   return (
-    <section id="experience" className="py-24 md:py-32 relative">
+    <section id="experience" className="py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <span className="text-brand-gold tracking-[4px] uppercase text-[11px] font-bold mb-3 block">
@@ -390,7 +479,7 @@ const EnterpriseFeatures = () => {
           {features.map((feature, i) => {
             const Icon = feature.icon;
             return (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -414,10 +503,11 @@ const EnterpriseFeatures = () => {
 
 const CTASection = () => {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden text-center">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.1),transparent_60%)]" />
-      
-      <motion.div 
+    <section className="py-24 md:py-32 relative overflow-hidden text-center bg-[#071412] border-t border-white/5">
+      <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5 mix-blend-overlay" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.15),transparent_70%)]" />
+
+      <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -451,7 +541,7 @@ const Footer = () => {
               Elevating the classical art of Bharatanatyam through rigorous training, academic excellence, and global performance.
             </p>
           </div>
-          
+
           <div>
             <h5 className="text-[11px] font-medium tracking-[3px] uppercase text-brand-gold mb-5">Programs</h5>
             <ul className="space-y-3 text-[13px] text-white/60">
@@ -467,7 +557,7 @@ const Footer = () => {
             <ul className="space-y-3 text-[13px] text-white/60">
               <li><a href="tel:+12125550198" className="hover:text-white transition-colors">+1 (212) 555-0198</a></li>
               <li><a href="mailto:admissions@natya.edu" className="hover:text-white transition-colors">admissions@natya.edu</a></li>
-              <li><span className="cursor-default">124 Heritage Arts District,<br/>NY 10012</span></li>
+              <li><span className="cursor-default">124 Heritage Arts District,<br />NY 10012</span></li>
             </ul>
           </div>
 
@@ -501,6 +591,7 @@ export default function App() {
         <Hero />
         <Philosophy />
         <Curriculum />
+        <VideoSection />
         <Gallery />
         <EnterpriseFeatures />
         <CTASection />
