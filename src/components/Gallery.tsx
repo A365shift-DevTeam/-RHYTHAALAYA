@@ -39,7 +39,6 @@ const Gallery = () => {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className={`${item.span} ${item.aspect} bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl flex flex-col items-center justify-center gap-2 hover:scale-[1.02] hover:border-brand-gold/30 transition-all duration-400 cursor-pointer relative overflow-hidden group`}
             >
-              <img src={item.image} alt={item.label} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-all duration-700" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 z-10" />
               <div className="absolute inset-2.5 border border-dashed border-brand-gold/30 rounded-lg z-20 pointer-events-none" />
               <span className="absolute bottom-6 text-[11px] tracking-[3px] uppercase text-brand-gold z-30 font-medium drop-shadow-md">{item.label}</span>

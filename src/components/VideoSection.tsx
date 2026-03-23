@@ -26,12 +26,7 @@ const VideoSection = () => {
           {/* Subtle gradient overlay for better text contrast and mood */}
           <div className="absolute inset-0 bg-[#0b1f1c]/30 group-hover:bg-[#0b1f1c]/10 transition-all duration-500 z-10" />
 
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Bharatanatyam_-_Durga_Swaminathan_02.jpg"
-            alt="Performance Video"
-            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            referrerPolicy="no-referrer"
-          />
+
 
           {/* Center Play Button and Text */}
           <div className="absolute inset-0 flex flex-col items-center justify-center z-20">

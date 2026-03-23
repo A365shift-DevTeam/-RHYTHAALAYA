@@ -49,7 +49,6 @@ const Curriculum = () => {
               className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1.5 hover:border-brand-gold/30 transition-all duration-400 group"
             >
               <div className="w-full aspect-[16/10] bg-white/5 flex flex-col items-center justify-center gap-2 relative overflow-hidden">
-                <img src={program.image} alt={program.title} className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" referrerPolicy="no-referrer" />
                 <div className="absolute inset-3 border border-dashed border-brand-gold/30 rounded-lg z-20 pointer-events-none" />
               </div>
               <div className="p-6 md:p-8">
