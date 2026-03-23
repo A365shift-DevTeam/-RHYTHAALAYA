@@ -12,11 +12,6 @@ const Curriculum = () => {
       title: "Repertoire",
       desc: "Learning the traditional Margam: Alarippu, Jatiswaram, Shabdam, Varnam. Introduction to Abhinaya and complex rhythmic patterns.",
       image: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Bharatanatyam_dance_at_shilpakala_academy_03.jpg"
-    },
-    {
-      title: "Arangetram & Beyond",
-      desc: "Preparation for the solo debut performance. Advanced choreography, Nattuvangam training, and professional performance opportunities.",
-      image: "https://upload.wikimedia.org/wikipedia/commons/9/9f/Bharatanatyam_dance_at_shilpakala_academy_06.jpg"
     }
   ];
 
@@ -38,7 +33,7 @@ const Curriculum = () => {
           <div className="w-12 h-[1.5px] bg-brand-gold mx-auto mt-6" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-8">
           {programs.map((program, index) => (
             <motion.div
               key={index}

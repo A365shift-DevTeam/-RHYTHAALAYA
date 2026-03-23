@@ -1,23 +1,23 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Award, Globe, Music } from 'lucide-react';
+import { Monitor, Home, User } from 'lucide-react';
 
 const EnterpriseFeatures = () => {
   const features = [
     {
-      title: 'Global Certification',
-      desc: 'Internationally recognized grading system and diplomas, ensuring our students meet global standards of classical arts education.',
-      icon: Award
+      title: 'Online Classes',
+      desc: 'Join live sessions from anywhere via Zoom. Ideal for students outside Bengaluru or those who prefer learning from home.',
+      icon: Monitor
     },
     {
-      title: 'Hybrid Conservatory',
-      desc: 'State-of-the-art virtual studios complementing physical classes, allowing students worldwide to access our elite curriculum.',
-      icon: Globe
+      title: 'Offline at Studio',
+      desc: 'Train at our Horamavu studio with hands-on corrections, live music, and the energy of dancing alongside peers.',
+      icon: Home
     },
     {
-      title: 'Live Accompaniment',
-      desc: 'Training with professional Carnatic musicians to develop a profound understanding of rhythm, melody, and musicality.',
-      icon: Music
+      title: 'One-to-One',
+      desc: 'Personalised private sessions tailored to your pace and goals — perfect for exam prep, Arangetram, or focused improvement.',
+      icon: User
     },
   ];
 
@@ -26,13 +26,13 @@ const EnterpriseFeatures = () => {
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <span className="text-brand-gold tracking-[4px] uppercase text-[11px] font-bold mb-3 block">
-            The Natya Advantage
+            Flexible Options
           </span>
           <h2 className="font-serif text-4xl md:text-[50px] text-white leading-[1.2] mb-4">
-            Enterprise Excellence
+            Learning Formats
           </h2>
           <p className="text-white/80 font-light text-[15px] max-w-2xl mx-auto">
-            We provide a world-class infrastructure and academic framework to support the development of professional artists.
+            Choose the learning format that best fits your location, schedule, and personal artistic goals.
           </p>
           <div className="w-12 h-[1.5px] bg-brand-gold mx-auto mt-6" />
         </div>
