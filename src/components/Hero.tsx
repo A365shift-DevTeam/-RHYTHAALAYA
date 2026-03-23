@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { TypeAnimation } from 'react-type-animation';
 
 const mudras = [
   "Pataka", "Tripataka", "Ardhapataka", "Kartarimukha", "Mayura", 
@@ -46,21 +45,11 @@ const Hero = () => {
 
             {/* Subtitle */}
             <div className="text-brand-gold text-sm md:text-base tracking-[0.3em] uppercase mb-10 h-6 flex items-center justify-center">
-              <TypeAnimation
-                sequence={[
-                  'Dance Beyond Movement',
-                  2000,
-                  '',
-                  1000,
-                ]}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-              />
+              <span>Dance Beyond Movement</span>
             </div>
 
             {/* Constrained Mudras Marquee */}
-            <div className="w-[88%] md:w-[94%] lg:w-[96%] mx-auto relative overflow-hidden flex whitespace-nowrap border-y border-brand-gold/20 py-2.5 mb-10 bg-transparent">
+            <div className="w-[65%] md:w-[70%] lg:w-[75%] mx-auto relative overflow-hidden flex whitespace-nowrap border-y border-brand-gold/20 py-2.5 mb-10 bg-transparent">
               <div className="absolute inset-y-0 left-0 w-8 md:w-16 bg-gradient-to-r from-[#0b2c2f] to-transparent z-10 pointer-events-none" />
               <div className="absolute inset-y-0 right-0 w-8 md:w-16 bg-gradient-to-l from-[#0b2c2f] to-transparent z-10 pointer-events-none" />
               
