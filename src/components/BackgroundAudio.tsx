@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import audioFile from '../images/Audio.mp4';
+import audioFile from '../images/Audio.m4a';
 
 const BackgroundAudio = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
-  const audioRef = useRef<HTMLVideoElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     // Attempt autoplay if browser allows (usually only if muted)
@@ -34,11 +34,11 @@ const BackgroundAudio = () => {
 
   return (
     <div className="fixed bottom-24 right-6 sm:bottom-28 sm:right-6 z-[100]">
-      <video
+      <audio
         ref={audioRef}
         src={audioFile}
         loop
-        playsInline
+        autoPlay
         muted={isMuted}
         className="hidden"
       />

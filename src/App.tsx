@@ -6,7 +6,6 @@ import Curriculum from './components/Curriculum';
 import VideoSection from './components/VideoSection';
 import Gallery from './components/Gallery';
 import EnterpriseFeatures from './components/EnterpriseFeatures';
-import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import WhatsAppWidget from './components/WhatsAppWidget';
 import BackgroundAudio from './components/BackgroundAudio';
@@ -22,7 +21,6 @@ export default function App() {
         <VideoSection />
         <Gallery />
         <EnterpriseFeatures />
-        <CTASection />
       </main>
       <Footer />
       <WhatsAppWidget />

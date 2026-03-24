@@ -5,11 +5,12 @@ import img2 from '../images/gallery/2.jpeg';
 import img3 from '../images/gallery/3.jpeg';
 import img4 from '../images/gallery/4.jpeg';
 import img5 from '../images/gallery/5.jpeg';
+import img6 from '../images/gallery/6.jpeg';
 
 const Gallery = () => {
   const items = [
     { label: 'Nritta', span: 'col-span-1 md:col-span-2', aspect: 'aspect-[1/1.2] md:aspect-[2/1.2]', image: img3 },
-    { label: 'Abhinaya', span: 'col-span-1', aspect: 'aspect-[1/1.2]', image: img2 },
+    { label: 'Abhinaya', span: 'col-span-1', aspect: 'aspect-[1/1.2]', image: img6 },
     { label: 'Studio', span: 'col-span-1', aspect: 'aspect-[1/1.2]', image: img5 },
     { label: 'Arangetram', span: 'col-span-1', aspect: 'aspect-[1/1.2]', image: img1 },
     { label: 'Ensemble', span: 'col-span-1 md:col-span-2', aspect: 'aspect-[1/1.2] md:aspect-[2/1.2]', image: img4 },

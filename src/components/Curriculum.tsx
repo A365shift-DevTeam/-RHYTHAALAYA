@@ -1,61 +1,74 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import curriculumImage from '../images/image 2.png';
 
 const Curriculum = () => {
-  const programs = [
-    {
-      title: "Foundation",
-      desc: "Mastery of Adavus (basic steps), Talam (rhythm), and fundamental body conditioning. Building the structural core of the dancer.",
-      image: "https://upload.wikimedia.org/wikipedia/commons/0/03/Bharatanatyam_dance_at_shilpakala_academy_01.jpg"
-    },
-    {
-      title: "Repertoire",
-      desc: "Learning the traditional Margam: Alarippu, Jatiswaram, Shabdam, Varnam. Introduction to Abhinaya and complex rhythmic patterns.",
-      image: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Bharatanatyam_dance_at_shilpakala_academy_03.jpg"
-    }
-  ];
-
   return (
-    <section id="curriculum" className="py-16 sm:py-20 md:py-32 relative">
-      {/* Ambient glow */}
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#1c4b45]/10 rounded-full blur-[150px] -z-10 pointer-events-none" />
+    <section id="curriculum" className="py-16 sm:py-20 md:py-32 relative bg-black/20 border-t border-b border-white/5">
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12">
-        <div className="text-center mb-12 sm:mb-16">
-          <span className="text-brand-gold tracking-[3px] sm:tracking-[4px] uppercase text-[10px] sm:text-[11px] font-bold mb-3 block">
-            Academic Structure
-          </span>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-[50px] text-white leading-[1.2] mb-4">
-            A Structured Path to Mastery
-          </h2>
-          <p className="text-white/80 font-light text-[14px] sm:text-[15px] max-w-2xl mx-auto">
-            Our curriculum is designed to transform passionate beginners into professional artists through a systematic, rigorous, and holistic educational approach.
-          </p>
-          <div className="w-12 h-[1.5px] bg-brand-gold mx-auto mt-6" />
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 md:gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <span className="text-brand-gold tracking-[3px] sm:tracking-[4px] uppercase text-[10px] sm:text-[11px] font-bold mb-3 block">
+              Kathak Program
+            </span>
+            <h3 className="font-serif text-3xl sm:text-4xl md:text-[42px] text-white leading-[1.2] mb-5 sm:mb-6">
+              Classical Kathak <br /><span className="italic text-brand-gold">Program Overview</span>
+            </h3>
+            <div className="space-y-4 text-white/80 font-light text-[14px] sm:text-[15px] leading-relaxed mb-7 sm:mb-8">
+              <p>
+                Classical Kathak training focused on technique, rhythm, and expression. Led by Eshanya Bhat with 15+ years of experience, the program offers structured learning for beginners and young learners, with selective exposure to semi-classical styles.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-3 sm:gap-4 mt-7 sm:mt-8">
+              {[
+                'Strong foundation in Classical Kathak',
+                'Emphasis on rhythm, posture, and expression',
+                'Structured progression for all levels',
+                'Semi-classical and Bollywood Kathak (select modules)'
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 text-[13px] font-medium text-white">
+                  <div className="w-2 h-2 rounded-full bg-brand-gold shrink-0" />
+                  {item}
+                </div>
+              ))}
+            </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-5 sm:gap-8">
-          {programs.map((program, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1.5 hover:border-brand-gold/30 transition-all duration-400 group"
-            >
-              <div className="w-full aspect-[16/10] bg-white/5 flex flex-col items-center justify-center gap-2 relative overflow-hidden">
-                <div className="absolute inset-3 border border-dashed border-brand-gold/30 rounded-lg z-20 pointer-events-none" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="relative flex flex-col justify-center items-center"
+          >
+            <div className="relative w-full max-w-[260px] sm:max-w-[310px] md:max-w-[340px] aspect-square">
+              <div className="absolute inset-0 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 overflow-hidden shadow-lg">
+                <div className="absolute inset-4 border border-dashed border-brand-gold/40 rounded-full z-20 pointer-events-none" />
+                <img src={curriculumImage} alt="Eshanya Bhat Kathak Program" className="absolute inset-0 w-full h-full object-cover object-center" />
               </div>
-              <div className="p-5 sm:p-6 md:p-8">
-                <h4 className="font-serif text-[20px] sm:text-[22px] font-medium text-white mb-3 group-hover:text-brand-gold transition-colors">
-                  {program.title}
-                </h4>
-                <p className="text-white/70 font-light text-[13px] sm:text-[14px] leading-[1.6]">
-                  {program.desc}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+              <div className="absolute -inset-[6%] rounded-full border border-brand-gold/20 pointer-events-none" />
+              <div className="absolute -inset-[9%] rounded-full border border-brand-gold/10 blur-[1px] pointer-events-none" />
+              <div className="absolute top-4 right-4 md:top-8 md:right-8 w-28 h-28 rounded-full bg-brand-gold opacity-10 blur-2xl pointer-events-none" />
+            </div>
+
+            <div className="text-center mt-12 sm:mt-14">
+              <p className="font-serif text-2xl sm:text-3xl text-white">Eshanya Bhat</p>
+              <p className="text-brand-gold text-[11px] sm:text-[12px] tracking-[3px] uppercase mt-2">Kathak Artist and Instructor</p>
+            </div>
+
+            <div className="mt-7 sm:mt-8 grid grid-cols-1 gap-3 text-[13px] sm:text-[14px] text-white/80 w-full max-w-[400px] text-left">
+              <p><span className="text-white font-medium">Who Can Join:</span> Beginners and Kids batches available</p>
+              <p><span className="text-white font-medium">Class Timings:</span> Weekends (Saturday and Sunday), 9:00 AM</p>
+              
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

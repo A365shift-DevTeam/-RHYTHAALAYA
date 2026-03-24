@@ -15,15 +15,33 @@ const Philosophy = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative flex justify-center items-center"
+            className="flex flex-col items-center justify-center"
           >
-            <div className="w-full max-w-[400px] aspect-square rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex flex-col items-center justify-center gap-3 relative overflow-hidden shadow-lg">
-              <div className="absolute inset-4 border border-dashed border-brand-gold/40 rounded-full z-20 pointer-events-none" />
-              <img src={guruImage} alt="Artistic Director" className="absolute inset-0 w-full h-full object-cover object-top" />
+            {/* Image Container with Decorations */}
+            <div className="relative mb-12 flex items-center justify-center">
+              <div className="w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[400px] md:h-[400px] rounded-full bg-white/5 backdrop-blur-sm border border-white/10 relative overflow-hidden shadow-2xl z-10">
+                <div className="absolute inset-4 border border-dashed border-brand-gold/40 rounded-full z-20 pointer-events-none" />
+                <img
+                  src={guruImage}
+                  alt="Rinee Infant - Founder & Artist Director"
+                  className="absolute inset-0 w-full h-full object-cover object-top"
+                />
+              </div>
+
+              {/* Outer Decorative Rings - Centered on the image */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[112%] aspect-square rounded-full border border-brand-gold/20 -z-10" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[118%] aspect-square rounded-full border border-brand-gold/10 -z-10 blur-[1px]" />
             </div>
-            {/* Decorative Elements */}
-            <div className="absolute w-full max-w-[440px] aspect-square rounded-full border border-brand-gold/20 -z-10" />
-            <div className="absolute bottom-4 right-4 md:bottom-8 md:right-12 w-32 h-32 rounded-full bg-brand-gold opacity-10 -z-10 blur-2xl" />
+
+            {/* Founder Details */}
+            <div className="text-center">
+              <h4 className="font-serif text-[28px] sm:text-[32px] text-white tracking-wide mb-2 leading-tight">
+                Rinee Infanta
+              </h4>
+              <p className="text-brand-gold text-[10px] sm:text-[11px] tracking-[4px] uppercase font-bold opacity-90">
+                Founder & Artist Director
+              </p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -36,7 +54,7 @@ const Philosophy = () => {
               Our Philosophy
             </span>
             <h3 className="font-serif text-3xl sm:text-4xl md:text-[42px] text-white leading-[1.2] mb-5 sm:mb-6">
-              Rooted in the <br /><span className="italic text-brand-gold">Natya Shastra</span>
+              Rooted in  <br /><span className="italic text-brand-gold">Classsical Tradition</span>
             </h3>
             <div className="space-y-4 text-white/80 font-light text-[14px] sm:text-[15px] leading-relaxed mb-7 sm:mb-8">
               <p>
@@ -50,9 +68,11 @@ const Philosophy = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-7 sm:mt-8">
               {[
                 "Global Certification",
-                "World-Class Faculty",
+                "Disciplined Mastery",
                 "Rigorous Syllabus",
-                "Career Placement"
+                "Dedicated Practice",
+                "Precious Training",
+                "Structured Learning"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 text-[13px] font-medium text-white">
                   <div className="w-6 h-6 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">
