@@ -16,24 +16,24 @@ const Curriculum = () => {
   ];
 
   return (
-    <section id="curriculum" className="py-24 md:py-32 relative">
+    <section id="curriculum" className="py-16 sm:py-20 md:py-32 relative">
       {/* Ambient glow */}
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#1c4b45]/10 rounded-full blur-[150px] -z-10 pointer-events-none" />
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="text-center mb-16">
-          <span className="text-brand-gold tracking-[4px] uppercase text-[11px] font-bold mb-3 block">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="text-center mb-12 sm:mb-16">
+          <span className="text-brand-gold tracking-[3px] sm:tracking-[4px] uppercase text-[10px] sm:text-[11px] font-bold mb-3 block">
             Academic Structure
           </span>
-          <h2 className="font-serif text-4xl md:text-[50px] text-white leading-[1.2] mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-[50px] text-white leading-[1.2] mb-4">
             A Structured Path to Mastery
           </h2>
-          <p className="text-white/80 font-light text-[15px] max-w-2xl mx-auto">
+          <p className="text-white/80 font-light text-[14px] sm:text-[15px] max-w-2xl mx-auto">
             Our curriculum is designed to transform passionate beginners into professional artists through a systematic, rigorous, and holistic educational approach.
           </p>
           <div className="w-12 h-[1.5px] bg-brand-gold mx-auto mt-6" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-5 sm:gap-8">
           {programs.map((program, index) => (
             <motion.div
               key={index}
@@ -46,11 +46,11 @@ const Curriculum = () => {
               <div className="w-full aspect-[16/10] bg-white/5 flex flex-col items-center justify-center gap-2 relative overflow-hidden">
                 <div className="absolute inset-3 border border-dashed border-brand-gold/30 rounded-lg z-20 pointer-events-none" />
               </div>
-              <div className="p-6 md:p-8">
-                <h4 className="font-serif text-[22px] font-medium text-white mb-3 group-hover:text-brand-gold transition-colors">
+              <div className="p-5 sm:p-6 md:p-8">
+                <h4 className="font-serif text-[20px] sm:text-[22px] font-medium text-white mb-3 group-hover:text-brand-gold transition-colors">
                   {program.title}
                 </h4>
-                <p className="text-white/70 font-light text-[14px] leading-[1.6]">
+                <p className="text-white/70 font-light text-[13px] sm:text-[14px] leading-[1.6]">
                   {program.desc}
                 </p>
               </div>

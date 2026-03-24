@@ -5,11 +5,11 @@ import guruImage from '../images/image1.jpeg';
 
 const Philosophy = () => {
   return (
-    <section id="philosophy" className="py-24 md:py-32 relative bg-black/20 border-t border-b border-white/5">
+    <section id="philosophy" className="py-16 sm:py-20 md:py-32 relative bg-black/20 border-t border-b border-white/5">
       {/* Ambient glow */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 md:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -32,13 +32,13 @@ const Philosophy = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <span className="text-brand-gold tracking-[4px] uppercase text-[11px] font-bold mb-3 block">
+            <span className="text-brand-gold tracking-[3px] sm:tracking-[4px] uppercase text-[10px] sm:text-[11px] font-bold mb-3 block">
               Our Philosophy
             </span>
-            <h3 className="font-serif text-4xl md:text-[42px] text-white leading-[1.2] mb-6">
+            <h3 className="font-serif text-3xl sm:text-4xl md:text-[42px] text-white leading-[1.2] mb-5 sm:mb-6">
               Rooted in the <br /><span className="italic text-brand-gold">Natya Shastra</span>
             </h3>
-            <div className="space-y-4 text-white/80 font-light text-[15px] leading-relaxed mb-8">
+            <div className="space-y-4 text-white/80 font-light text-[14px] sm:text-[15px] leading-relaxed mb-7 sm:mb-8">
               <p>
                 Bharatanatyam is more than a dance; it is a moving meditation, a rigorous discipline, and a profound storytelling medium. Our academy approaches this ancient art form with uncompromising standards of excellence.
               </p>
@@ -47,7 +47,7 @@ const Philosophy = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-7 sm:mt-8">
               {[
                 "Global Certification",
                 "World-Class Faculty",

@@ -4,24 +4,24 @@ import { motion } from 'motion/react';
 const WhatsAppWidget = () => {
   return (
     <motion.a
-      href="https://wa.me/919597302769"
+      href="https://wa.me/919019860818"
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1, type: 'spring', stiffness: 200, damping: 20 }}
-      className="fixed bottom-6 right-6 z-[100] flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-xl hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all hover:scale-110 hover:-translate-y-1 group border-2 border-white/20"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[100] flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-[#25D366] rounded-full shadow-xl hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all hover:scale-110 hover:-translate-y-1 group border-2 border-white/20"
       aria-label="Chat on WhatsApp"
     >
-      <span className="absolute -top-1 -right-1 flex h-4 w-4">
+      <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5 sm:h-4 sm:w-4">
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-        <span className="relative inline-flex rounded-full h-4 w-4 bg-red-500 border-2 border-white"></span>
+        <span className="relative inline-flex rounded-full h-3.5 w-3.5 sm:h-4 sm:w-4 bg-red-500 border-2 border-white"></span>
       </span>
 
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
-        width="28" 
-        height="28" 
+        width="24" 
+        height="24" 
         viewBox="0 0 24 24" 
         fill="white" 
         stroke="none"

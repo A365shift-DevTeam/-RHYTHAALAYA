@@ -14,16 +14,21 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = ['About', 'Classes', 'Gallery', 'Learning'];
+  const navLinks = [
+    { label: 'About', href: '#philosophy' },
+    { label: 'Classes', href: '#curriculum' },
+    { label: 'Gallery', href: '#gallery' },
+    { label: 'Learning', href: '#experience' }
+  ];
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-[#0b1f1c]/80 backdrop-blur-md shadow-sm py-4 border-b border-white/5' : 'bg-transparent py-6'
+      className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-[#0b1f1c]/80 backdrop-blur-md shadow-sm py-3 md:py-4 border-b border-white/5' : 'bg-transparent py-4 md:py-6'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center gap-3">
         <div className="flex items-center gap-2">
-          <span className="font-serif text-2xl font-bold tracking-widest uppercase text-white">
+          <span className="font-serif text-lg sm:text-xl md:text-2xl font-bold tracking-[0.15em] sm:tracking-widest uppercase text-white">
             RHYTHAALAYA
           </span>
         </div>
@@ -32,15 +37,15 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               className="text-sm tracking-widest uppercase font-medium transition-colors hover:text-brand-gold text-white/90"
             >
-              {item}
+              {item.label}
             </a>
           ))}
           <a 
-            href="https://wa.me/919597302769"
+            href="https://wa.me/919019860818"
             target="_blank"
             rel="noopener noreferrer"
             className={`flex items-center justify-center gap-2 px-8 py-2.5 rounded-full border text-sm tracking-widest uppercase font-medium transition-all duration-300 ${isScrolled
@@ -56,7 +61,8 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden"
+          className="md:hidden p-1.5 -mr-1"
+          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
@@ -74,20 +80,20 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-[#0b1f1c] shadow-lg py-6 px-6 flex flex-col gap-4 md:hidden border-b border-white/10"
+            className="absolute top-full left-0 w-full bg-[#0b1f1c] shadow-lg py-5 px-4 sm:px-6 flex flex-col gap-4 md:hidden border-b border-white/10"
           >
             {navLinks.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-lg font-serif text-white border-b border-white/10 pb-2"
+                key={item.label}
+                href={item.href}
+                className="text-base sm:text-lg font-serif text-white border-b border-white/10 pb-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {item}
+                {item.label}
               </a>
             ))}
             <a 
-              href="https://wa.me/919597302769"
+              href="https://wa.me/919019860818"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm tracking-widest uppercase w-full font-medium hover:bg-white hover:text-[#0b1f1c] transition-colors text-center"

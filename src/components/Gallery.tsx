@@ -17,24 +17,24 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-24 md:py-32 relative bg-black/20">
+    <section id="gallery" className="py-16 sm:py-20 md:py-32 relative bg-black/20">
       {/* Ambient glow */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#1c4b45]/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="text-center mb-16">
-          <span className="text-brand-gold tracking-[4px] uppercase text-[11px] font-bold mb-3 block">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="text-center mb-12 sm:mb-16">
+          <span className="text-brand-gold tracking-[3px] sm:tracking-[4px] uppercase text-[10px] sm:text-[11px] font-bold mb-3 block">
             Moments
           </span>
-          <h2 className="font-serif text-4xl md:text-[50px] text-white leading-[1.2] mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-[50px] text-white leading-[1.2] mb-4">
             Gallery
           </h2>
-          <p className="text-white/80 font-light text-[15px] max-w-2xl mx-auto">
+          <p className="text-white/80 font-light text-[14px] sm:text-[15px] max-w-2xl mx-auto">
             Glimpses of performances, practice sessions, and the beauty of Bharatanatyam at Natya.
           </p>
           <div className="w-12 h-[1.5px] bg-brand-gold mx-auto mt-6" />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           {items.map((item, i) => (
             <motion.div
               key={i}

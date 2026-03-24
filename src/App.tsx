@@ -9,6 +9,7 @@ import EnterpriseFeatures from './components/EnterpriseFeatures';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import WhatsAppWidget from './components/WhatsAppWidget';
+import BackgroundAudio from './components/BackgroundAudio';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
       </main>
       <Footer />
       <WhatsAppWidget />
+      <BackgroundAudio />
     </div>
   );
 }
