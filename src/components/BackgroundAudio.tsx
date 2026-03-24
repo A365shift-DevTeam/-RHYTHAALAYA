@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Volume2, VolumeX } from 'lucide-react';
+import { Music } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import audioFile from '../images/Audio.m4a';
 
@@ -57,8 +57,10 @@ const BackgroundAudio = () => {
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.5, opacity: 0 }}
+              className="relative"
             >
-              <VolumeX className="w-5 h-5 text-white/70 group-hover:text-white" />
+              <Music className="w-5 h-5 text-white/40 group-hover:text-white/70" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-[1.5px] bg-white/40 rotate-45 group-hover:bg-white/60 transition-colors" />
             </motion.div>
           ) : (
             <motion.div
@@ -68,8 +70,8 @@ const BackgroundAudio = () => {
               exit={{ scale: 0.5, opacity: 0 }}
               className="relative"
             >
-              <Volume2 className="w-5 h-5 text-brand-gold" />
-              <span className="absolute -inset-1 rounded-full border border-brand-gold animate-ping opacity-20" />
+              <Music className="w-5 h-5" style={{ color: "rgb(35, 144, 154)" }} />
+              <span className="absolute -inset-1 rounded-full border border-[rgb(35,144,154)] animate-ping opacity-20" />
             </motion.div>
           )}
         </AnimatePresence>
