@@ -11,7 +11,7 @@ const EnterpriseFeatures = () => {
     },
     {
       title: 'Offline at Studio',
-      desc: 'Train at our Horamavu studio with hands-on corrections, live music, and the energy of dancing alongside peers.',
+      desc: 'Train at our Horamavu studio with hands-on corrections, and the energy of dancing alongside peers.',
       icon: Home
     },
     {

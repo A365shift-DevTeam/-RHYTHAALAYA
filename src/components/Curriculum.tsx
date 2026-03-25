@@ -22,21 +22,27 @@ const Curriculum = () => {
             </h3>
             <div className="space-y-4 text-white/80 font-light text-[14px] sm:text-[15px] leading-relaxed mb-7 sm:mb-8">
               <p>
-                Classical Kathak training focused on technique, rhythm, and expression. Led by Eshanya Bhat with 15+ years of experience, the program offers structured learning for beginners and young learners, with selective exposure to semi-classical styles.
+                Trained in Kathak for over 15 years under Smitha Srinivasan, and currently a student at Nadam under Nandini Mehta and Murali Mohan. She has performed Kathak on various platforms and focuses on building strong foundations in technique, rhythm, and expression.
+              </p>
+              <p>
+                Classes emphasize pure Classical Kathak, with semi-classical and Bollywood Kathak introduced occasionally.
               </p>
             </div>
             <div className="grid grid-cols-1 gap-3 sm:gap-4 mt-7 sm:mt-8">
               {[
-                'Strong foundation in Classical Kathak',
-                'Emphasis on rhythm, posture, and expression',
-                'Structured progression for all levels',
-                'Semi-classical and Bollywood Kathak (select modules)'
+                
+                'Training lineage under renowned gurus',
+                'Strong focus on technique, rhythm, and expression',
+                'Pure Classical Kathak with occasional semi-classical and Bollywood exposure'
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 text-[13px] font-medium text-white">
                   <div className="w-2 h-2 rounded-full bg-brand-gold shrink-0" />
                   {item}
                 </div>
               ))}
+            </div>
+            <div className="mt-7 sm:mt-8 w-full text-[13px] sm:text-[14px] text-white/80 text-left">
+              <p><span className="text-white font-medium">Who Can Join:</span> Beginners, Adults and Kids</p>
             </div>
 
           </motion.div>
@@ -63,11 +69,6 @@ const Curriculum = () => {
               <p className="text-brand-gold text-[11px] sm:text-[12px] tracking-[3px] uppercase mt-2">Kathak Artist and Instructor</p>
             </div>
 
-            <div className="mt-7 sm:mt-8 grid grid-cols-1 gap-3 text-[13px] sm:text-[14px] text-white/80 w-full max-w-[400px] text-left">
-              <p><span className="text-white font-medium">Who Can Join:</span> Beginners and Kids batches available</p>
-              <p><span className="text-white font-medium">Class Timings:</span> Weekends (Saturday and Sunday), 9:00 AM</p>
-              
-            </div>
           </motion.div>
         </div>
       </div>

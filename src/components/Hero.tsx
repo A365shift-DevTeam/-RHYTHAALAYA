@@ -76,7 +76,7 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col items-center z-10">
-              <h2 className="font-serif italic text-[28px] sm:text-3xl md:text-[40px] text-brand-gold mb-7 sm:mb-10">
+              <h2 className="font-sans font-semibold text-[28px] sm:text-3xl md:text-[40px] tracking-[0.03em] text-brand-gold mb-7 sm:mb-10">
                 Begin Your Dance Journey
               </h2>
 

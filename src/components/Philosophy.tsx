@@ -39,7 +39,7 @@ const Philosophy = () => {
                 Rinee Infanta
               </h4>
               <p className="text-brand-gold text-[10px] sm:text-[11px] tracking-[4px] uppercase font-bold opacity-90">
-                Founder & Artist Director
+                Founder & Artistic Director
               </p>
             </div>
           </motion.div>
@@ -67,12 +67,12 @@ const Philosophy = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-7 sm:mt-8">
               {[
-                "Global Certification",
+                "Structured Learning",
+                "Standard Certification",
                 "Disciplined Mastery",
-                "Rigorous Syllabus",
-                "Dedicated Practice",
-                "Precious Training",
-                "Structured Learning"
+                "Detailed Syllabus",
+                "Regular training",
+                "Dedicated practice"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 text-[13px] font-medium text-white">
                   <div className="w-6 h-6 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">

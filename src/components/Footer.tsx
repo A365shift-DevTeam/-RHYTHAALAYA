@@ -22,6 +22,7 @@ const Footer = () => {
             <ul className="space-y-3 text-[13px] text-white/60">
               <li><a href="#curriculum" className="hover:text-white transition-colors">Bharatanatyam</a></li>
               <li><a href="#curriculum" className="hover:text-white transition-colors">Kathak</a></li>
+               <li><a href="#curriculum" className="hover:text-white transition-colors">Yoga</a></li>
             </ul>
           </div>
 

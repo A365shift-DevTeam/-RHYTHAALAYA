@@ -30,7 +30,7 @@ const Gallery = () => {
             Gallery
           </h2>
           <p className="text-white/80 font-light text-[14px] sm:text-[15px] max-w-2xl mx-auto">
-            Glimpses of performances, practice sessions, and the beauty of Bharatanatyam at Natya.
+           Glimpses of practice sessions and performances
           </p>
           <div className="w-12 h-[1.5px] bg-brand-gold mx-auto mt-6" />
         </div>
